@@ -1,6 +1,10 @@
 #! /bin/bash
+
+#expect :- waits till character or sequene of characters
+#send :- send chars
+
 PASSWORDVALUE=#fetch password from file system or from automation repo
-PASSWORD=`echo $PASSWORDVALUE | tr -d '\"'`
+PASSWORD=`echo $PASSWORDVALUE`
 expect <<EOS
 spawn su
 expect "Password:"
